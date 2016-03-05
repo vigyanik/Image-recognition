@@ -23,10 +23,24 @@ We use OpenCV here to load the image and extract SIFT descriptor only, you can u
 
 ## Demo
 ```
-$python scspm.py --train path/to/trainingData.txt --test path/to/testData.txt
+$python bow.py --train path/to/trainingData.txt --test path/to/testData.txt
+#
+             precision    recall  f1-score   support
 
+   airplane       0.75      0.30      0.43        20
+ automobile       0.77      0.50      0.61        20
+       bird       0.64      0.70      0.67        20
+        cat       0.60      0.75      0.67        20
+       deer       0.62      0.80      0.70        20
+        dog       0.90      0.45      0.60        20
+       frog       0.65      0.85      0.74        20
+      horse       0.91      1.00      0.95        20
+       ship       0.50      0.70      0.58        20
+
+avg / total       0.70      0.67      0.66       180
 
 ```
+
 ## Usage
 An end-to-end script with training and testing is provided.  
 **Dataset File** is a text file with **label** and **path** formatting like:
@@ -43,11 +57,11 @@ label path/to/test1.jpg
 label path/to/test2.jpg
 ```
 
+Author: CyrusChiu @ntu
 
 
 
-
-
+-----
 [1] CSURKA, Gabriella, et al. Visual categorization with bags of keypoints. In: Workshop on statistical learning in computer vision, ECCV. 2004. p. 1-2.
 
 [2] LAZEBNIK, Svetlana; SCHMID, Cordelia; PONCE, Jean. Beyond bags of features: Spatial pyramid matching for recognizing natural scene categories. In: Computer Vision and Pattern Recognition, 2006 IEEE Computer Society Conference on. IEEE, 2006. p. 2169-2178.
