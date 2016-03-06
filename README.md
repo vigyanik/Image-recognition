@@ -27,26 +27,26 @@ We use OpenCV here to load the image and extract SIFT descriptor only, you can u
 `example.py` training a SVM with SPM method on Caltech101 Dataset [6]
 
 ```
-$python example.py --train Caltech101/DatasetFile.txt                         
-
+$python example.py --train Caltech101/DatasetFile.txt
 ```
+
 
 ## Usage
 An end-to-end script with training and testing is provided
 
--       Dataset  
+- Dataset  
 **Dataset File** is a text file with the format of  **label** and **path** like:
 
   ```
-#train.txt
-label path/to/train1.jpg  
-label path/to/train2.jpg  
-label path/to/train3.jpg  
-```
-```
-#test.txt
-label path/to/test1.jpg
-label path/to/test2.jpg
+  #train.txt
+  label path/to/train1.jpg  
+  label path/to/train2.jpg  
+  label path/to/train3.jpg  
+  ```
+  ```
+  #test.txt
+  label path/to/test1.jpg
+  label path/to/test2.jpg
   ```
 
 - Training and evaluation on training set, predict on test set which is labeled 

@@ -17,6 +17,8 @@ print "Training data load from {}".format(args.train)
 print "Test data load from {}".format(args.test)
 
 X, y = load_my_data(args.train)
+
+# to save time...
 X = X[:200]
 y = y[:200]
 
