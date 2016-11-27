@@ -46,7 +46,8 @@ def extract_sift_descriptors(img):
     Return None if there's no descriptor detected
     """
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    sift = cv2.xfeatures2d.SIFT_create()
+    #sift = cv2.xfeatures2d.SIFT_create()
+    sift = cv2.AKAZE_create()
     keypoints, descriptors = sift.detectAndCompute(gray, None)
     return descriptors
 
@@ -58,7 +59,8 @@ def extract_DenseSift_descriptors(img):
     Return None if there's no descriptor detected
     """
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    sift = cv2.xfeatures2d.SIFT_create()
+    #sift = cv2.xfeatures2d.SIFT_create()
+    sift = cv2.AKAZE_create()
 
     # opencv docs DenseFeatureDetector
     # opencv 2.x code
